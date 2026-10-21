@@ -1,0 +1,37 @@
+SmallProbe.lean:9:47: error: Tactic `decide` failed for proposition
+  check tinyProof tinyCNF = true
+because its `Decidable` instance
+  instDecidableEqBool (check tinyProof tinyCNF) true
+did not reduce to `isTrue` or `isFalse`.
+
+Reduction got stuck at the `Decidable` instance
+  match check tinyProof tinyCNF, true with
+  | false, false => isTrue ⋯
+  | false, true => isFalse ⋯
+  | true, false => isFalse ⋯
+  | true, true => isTrue ⋯
+SmallProbe.lean:10:61: error: Tactic `decide` failed for proposition
+  check tinyProof tinyCNF = true
+because its `Decidable` instance
+  instDecidableEqBool (check tinyProof tinyCNF) true
+did not reduce to `isTrue` or `isFalse`.
+
+Reduction got stuck at the `Decidable` instance
+  match check tinyProof tinyCNF, true with
+  | false, false => isTrue ⋯
+  | false, true => isFalse ⋯
+  | true, false => isFalse ⋯
+  | true, true => isTrue ⋯
+SmallProbe.lean:12:58: error: Tactic `decide` failed for proposition
+  check #[Action.addEmpty 3 #[1]] tinyCNF = false
+because its `Decidable` instance
+  instDecidableEqBool (check #[Action.addEmpty 3 #[1]] tinyCNF) false
+did not reduce to `isTrue` or `isFalse`.
+
+Reduction got stuck at the `Decidable` instance
+  match check #[Action.addEmpty 3 #[1]] tinyCNF, false with
+  | false, false => isTrue ⋯
+  | false, true => isFalse ⋯
+  | true, false => isFalse ⋯
+  | true, true => isTrue ⋯
+'Std.Tactic.BVDecide.LRAT.check_sound' depends on axioms: [propext, Classical.choice, Quot.sound]

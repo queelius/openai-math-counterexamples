@@ -1,0 +1,12 @@
+KernelFull.lean:9:2: error: Tactic `decide` failed for proposition
+  lratChecker sourceFormula fullProof = Result.success
+because its `Decidable` instance
+  instDecidableEqResult (lratChecker sourceFormula fullProof) Result.success
+did not reduce to `isTrue` or `isFalse`.
+
+Reduction got stuck at the `Decidable` instance
+  match h : (lratChecker sourceFormula fullProof).ctorIdx.beq Result.success.ctorIdx with
+  | true => isTrue ⋯
+  | false => isFalse ⋯
+'concrete_checker_success' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'no_five_field_ten_label_model' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

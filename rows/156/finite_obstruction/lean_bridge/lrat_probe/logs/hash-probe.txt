@@ -1,0 +1,53 @@
+HashProbe.lean:7:129: error: Tactic `decide` failed for proposition
+  (Internal.DefaultClause.ofArray #[(⟨1, ⋯⟩, true)]).isSome = true
+because its `Decidable` instance
+  instDecidableEqBool (Internal.DefaultClause.ofArray #[(⟨1, ⋯⟩, true)]).isSome true
+did not reduce to `isTrue` or `isFalse`.
+
+Reduction got stuck at the `Decidable` instance
+  match (Internal.DefaultClause.ofArray #[(⟨1, ⋯⟩, true)]).isSome, true with
+  | false, false => isTrue ⋯
+  | false, true => isFalse ⋯
+  | true, false => isFalse ⋯
+  | true, true => isTrue ⋯
+HashProbe.lean:8:157: error: Tactic `decide` failed for proposition
+  Option.map (fun c => List.length c.clause) (Internal.DefaultClause.ofArray #[(⟨1, ⋯⟩, true)]) = some 1
+because its `Decidable` instance
+  (Option.map (fun c => List.length c.clause) (Internal.DefaultClause.ofArray #[(⟨1, ⋯⟩, true)])).instDecidableEq
+    (some 1)
+did not reduce to `isTrue` or `isFalse`.
+
+Reduction got stuck at the `Decidable` instance
+  match Option.map (fun c => List.length c.clause) (Internal.DefaultClause.ofArray #[(⟨1, ⋯⟩, true)]) with
+  | none =>
+    match some 1 with
+    | none => isTrue ⋯
+    | some val => isFalse ⋯
+  | some a =>
+    match some 1 with
+    | none => isFalse ⋯
+    | some b =>
+      match instDecidableEqNat a b with
+      | isTrue h => isTrue ⋯
+      | isFalse n => isFalse ⋯
+def Std.Tactic.BVDecide.LRAT.Internal.DefaultClause.ofArray : {n : Nat} →
+  Array (Literal (Internal.PosFin n)) → Option (Internal.DefaultClause n) :=
+fun {n} ls =>
+  have mapOption := Array.foldl Internal.DefaultClause.ofArray.folder (some (Std.HashMap.emptyWithCapacity ls.size)) ls;
+  match mapOption with
+  | none => none
+  | some map =>
+    have mapnodup := ⋯;
+    some { clause := map.toList, nodupkey := ⋯, nodup := ⋯ }
+@[irreducible] def Std.Tactic.BVDecide.LRAT.Internal.DefaultClause.ofArray.folder : {n : Nat} →
+  Option (Std.HashMap (Internal.PosFin n) Bool) →
+    Literal (Internal.PosFin n) → Option (Std.HashMap (Internal.PosFin n) Bool) :=
+fun {n} acc l =>
+  match acc with
+  | none => none
+  | some map =>
+    match map.getThenInsertIfNew? l.fst l.snd with
+    | (val?, map) =>
+      match val? with
+      | some val' => if (l.snd != val') = true then none else some map
+      | x => some map

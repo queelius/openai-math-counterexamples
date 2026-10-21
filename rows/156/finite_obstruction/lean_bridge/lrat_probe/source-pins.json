@@ -1,0 +1,17 @@
+{
+  "workspace_base": "5c85efc2b2409eb3a39c33da6047b8473868ed81",
+  "upstream_main": "f3e88206eb0c1ca065eb7106e06602d1aaa4c25b",
+  "source_bridge": "d3461179d6d7161ba3ae6241f09f1b160179b70a",
+  "certificate_predecessor": "c714c0a27e1cb668d63c6aa7a8c373aab0f2f9d9",
+  "openai_math": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "toolchain_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "prior_archive": "10.5281/zenodo.23530387",
+  "files": {
+    "research/family156_lean_bridge/lean/Family156Bridge.lean": "8640f8ca3d2c5faf7265ebdb4ab5abc4798dbfd0855e083dda53a7ebc2805c61",
+    "research/family156_lean_bridge/lean-export.json": "e4eb00d5b65fab7618e987168ba54e7d4945e6b14a8e019a6fd188de3f45d7c2",
+    "research/family156_down_omission/packet/rows/156/finite_obstruction/no_down_certificate.json": "f98da2cbdc8584a180fee391e6a03dc8ee6367bd31828b22e6652e9b0fc4ddd1"
+  },
+  "reference_source_sha256": "2edf8f16845c943113b43f34542a4bcdd26872910067b35d184c76915882ebb0"
+}

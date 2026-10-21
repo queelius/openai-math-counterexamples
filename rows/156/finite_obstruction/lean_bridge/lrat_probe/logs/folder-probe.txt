@@ -1,0 +1,32 @@
+FolderProbe.lean:9:129: error: Tactic `decide` failed for proposition
+  (Internal.DefaultClause.ofArray #[(⟨1, ⋯⟩, true)]).isSome = true
+because its `Decidable` instance
+  instDecidableEqBool (Internal.DefaultClause.ofArray #[(⟨1, ⋯⟩, true)]).isSome true
+did not reduce to `isTrue` or `isFalse`.
+
+Reduction got stuck at the `Decidable` instance
+  match (Internal.DefaultClause.ofArray #[(⟨1, ⋯⟩, true)]).isSome, true with
+  | false, false => isTrue ⋯
+  | false, true => isFalse ⋯
+  | true, false => isFalse ⋯
+  | true, true => isTrue ⋯
+FolderProbe.lean:10:142: error: Tactic `decide` failed for proposition
+  ((Std.HashMap.emptyWithCapacity 1).getThenInsertIfNew? ⟨1, ⋯⟩ true).snd.size = 1
+because its `Decidable` instance
+  instDecidableEqNat ((Std.HashMap.emptyWithCapacity 1).getThenInsertIfNew? ⟨1, ⋯⟩ true).snd.size 1
+did not reduce to `isTrue` or `isFalse`.
+
+Reduction got stuck at the `Decidable` instance
+  match h : ((Std.HashMap.emptyWithCapacity 1).getThenInsertIfNew? ⟨1, ⋯⟩ true).snd.size.beq 1 with
+  | true => isTrue ⋯
+  | false => isFalse ⋯
+FolderProbe.lean:11:113: error: Tactic `decide` failed for proposition
+  ((Std.HashMap.emptyWithCapacity 1).getThenInsertIfNew? 1 true).snd.size = 1
+because its `Decidable` instance
+  instDecidableEqNat ((Std.HashMap.emptyWithCapacity 1).getThenInsertIfNew? 1 true).snd.size 1
+did not reduce to `isTrue` or `isFalse`.
+
+Reduction got stuck at the `Decidable` instance
+  match h : ((Std.HashMap.emptyWithCapacity 1).getThenInsertIfNew? 1 true).snd.size.beq 1 with
+  | true => isTrue ⋯
+  | false => isFalse ⋯

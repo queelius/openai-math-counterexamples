@@ -1,0 +1,59 @@
+'Family156LRAT.source_satisfies_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Family156LRAT.checker_success_implies_no_source_model' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Family156LRAT.Controls.valid_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Family156LRAT.Controls.missing_hint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Family156LRAT.Controls.satisfiable_reject' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Family156LRAT.Controls.truncated_reject' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Family156LRAT.Controls.invalid_step_skips' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Family156LRAT.tiny_unpack' depends on axioms: [propext, Quot.sound]
+clauses=30361; retained=30361; steps=18302
+complete=success
+truncated=out of proof
+missing-first-hints=rup failure
+nonempty-clause-deleted=rup failure
+RESULT: native LRAT replay and controls verified; concrete kernel proof remains separate
+clauses=30361; retained=30361; steps=18302
+complete=rup failure
+truncated=out of proof
+missing-first-hints=rup failure
+nonempty-clause-deleted=rup failure
+RESULT: partial formalization and native verification reproduced; no unconditional kernel theorem
+test_damaged_hint (test_hints.HintTests.test_damaged_hint) ... ok
+test_invalid_literals (test_hints.HintTests.test_invalid_literals) ... ok
+test_nonunit_refutation (test_hints.HintTests.test_nonunit_refutation) ... ok
+test_not_a_refutation (test_hints.HintTests.test_not_a_refutation) ... ok
+test_out_of_range_hint (test_hints.HintTests.test_out_of_range_hint) ... ok
+test_repeated_calls_and_initial_empty (test_hints.HintTests.test_repeated_calls_and_initial_empty) ... ok
+test_satisfiable_formula (test_hints.HintTests.test_satisfiable_formula) ... ok
+test_two_unit_contradiction (test_hints.HintTests.test_two_unit_contradiction) ... ok
+test_invalid_digits (test_packing.PackingTests.test_invalid_digits) ... ok
+test_roundtrip (test_packing.PackingTests.test_roundtrip) ... ok
+test_truncated_fuel_changes_trace (test_packing.PackingTests.test_truncated_fuel_changes_trace) ... ok
+test_early_empty_clause_reject (test_workflows.WorkflowTests.test_early_empty_clause_reject) ... ok
+test_hint_cli_and_data_emitter (test_workflows.WorkflowTests.test_hint_cli_and_data_emitter) ... ok
+test_nonunit_and_invalid_hint_reject (test_workflows.WorkflowTests.test_nonunit_and_invalid_hint_reject) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.003s
+
+OK
+test_damaged_hint (test_hints.HintTests.test_damaged_hint) ... ok
+test_invalid_literals (test_hints.HintTests.test_invalid_literals) ... ok
+test_nonunit_refutation (test_hints.HintTests.test_nonunit_refutation) ... ok
+test_not_a_refutation (test_hints.HintTests.test_not_a_refutation) ... ok
+test_out_of_range_hint (test_hints.HintTests.test_out_of_range_hint) ... ok
+test_repeated_calls_and_initial_empty (test_hints.HintTests.test_repeated_calls_and_initial_empty) ... ok
+test_satisfiable_formula (test_hints.HintTests.test_satisfiable_formula) ... ok
+test_two_unit_contradiction (test_hints.HintTests.test_two_unit_contradiction) ... ok
+test_invalid_digits (test_packing.PackingTests.test_invalid_digits) ... ok
+test_roundtrip (test_packing.PackingTests.test_roundtrip) ... ok
+test_truncated_fuel_changes_trace (test_packing.PackingTests.test_truncated_fuel_changes_trace) ... ok
+test_early_empty_clause_reject (test_workflows.WorkflowTests.test_early_empty_clause_reject) ... ok
+test_hint_cli_and_data_emitter (test_workflows.WorkflowTests.test_hint_cli_and_data_emitter) ... ok
+test_nonunit_and_invalid_hint_reject (test_workflows.WorkflowTests.test_nonunit_and_invalid_hint_reject) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.003s
+
+OK
+uncaught exception: Native verification or rejection control failed

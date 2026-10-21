@@ -1,0 +1,5 @@
+'Family156LRAT.Controls.valid_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Family156LRAT.Controls.missing_hint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Family156LRAT.Controls.satisfiable_reject' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Family156LRAT.Controls.truncated_reject' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Family156LRAT.Controls.invalid_step_skips' depends on axioms: [propext, Classical.choice, Quot.sound]

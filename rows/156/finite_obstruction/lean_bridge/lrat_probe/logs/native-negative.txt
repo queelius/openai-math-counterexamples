@@ -1,0 +1,6 @@
+clauses=30361; retained=30361; steps=18302
+complete=rup failure
+truncated=out of proof
+missing-first-hints=rup failure
+nonempty-clause-deleted=rup failure
+uncaught exception: Native verification or rejection control failed

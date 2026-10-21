@@ -1,0 +1,50 @@
+KernelComponents.lean:5:41: error: Tactic `decide` failed for proposition
+  (subsets 3).length = 120
+because its `Decidable` instance
+  instDecidableEqNat (subsets 3).length 120
+did not reduce to `isTrue` or `isFalse`.
+
+Reduction got stuck at the `Decidable` instance
+  match h : (subsets 3).length.beq 120 with
+  | true => isTrue ⋯
+  | false => isFalse ⋯
+KernelComponents.lean:6:43: error: Tactic `decide` failed for proposition
+  variableTable.length = 330
+because its `Decidable` instance
+  instDecidableEqNat variableTable.length 330
+did not reduce to `isTrue` or `isFalse`.
+
+Reduction got stuck at the `Decidable` instance
+  match h : variableTable.length.beq 330 with
+  | true => isTrue ⋯
+  | false => isFalse ⋯
+KernelComponents.lean:7:40: error: Tactic `decide` failed. The elaborator is able to reduce the `Decidable` instance, but the kernel fails with:
+
+  (kernel) excessive memory consumption detected
+KernelComponents.lean:8:42: error: Tactic `decide` failed for proposition
+  encodedCNF.length = 30361
+because its `Decidable` instance
+  instDecidableEqNat encodedCNF.length 30361
+did not reduce to `isTrue` or `isFalse`.
+
+Reduction got stuck at the `Decidable` instance
+  match h : encodedCNF.length.beq 30361 with
+  | true => isTrue ⋯
+  | false => isFalse ⋯
+KernelComponents.lean:9:52: error: Tactic `decide` failed for proposition
+  encodedCNF.head!.head! = (false, 1)
+because its `Decidable` instance
+  instDecidableEqProd encodedCNF.head!.head! (false, 1)
+did not reduce to `isTrue` or `isFalse`.
+
+Reduction got stuck at the `Decidable` instance
+  match
+    (match encodedCNF.head! with
+      | [] => panicWithPosWithDecl "Init.Data.List.BasicAux" "List.head!" 80 12 "empty list"
+      | a :: tail => a).1,
+    false with
+  | false, false => isTrue ⋯
+  | false, true => isFalse ⋯
+  | true, false => isFalse ⋯
+  | true, true => isTrue ⋯
+'Family156Bridge.encodedCNF' depends on axioms: [propext, Classical.choice, Quot.sound]

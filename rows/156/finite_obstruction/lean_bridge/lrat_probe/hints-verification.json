@@ -1,0 +1,11 @@
+{
+  "python": "3.13.15",
+  "steps": 18302,
+  "hints": 1317865,
+  "maximum_hints_per_step": 260,
+  "hint_generation_and_sequential_replay_seconds": 40.931,
+  "hints_sha256": "609faa5bb31b3b4ce54af2b372d17e7e520a8f4f0e42ff7a4d075ed474413e54",
+  "certificate_sha256": "f98da2cbdc8584a180fee391e6a03dc8ee6367bd31828b22e6652e9b0fc4ddd1",
+  "export_sha256": "e4eb00d5b65fab7618e987168ba54e7d4945e6b14a8e019a6fd188de3f45d7c2",
+  "replay_method": "Separate sequential hint replay; shares certificate and variable map; not formal verification or independence of the underlying mathematical claim"
+}

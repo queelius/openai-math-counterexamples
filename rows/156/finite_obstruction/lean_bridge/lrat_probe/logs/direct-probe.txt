@@ -1,0 +1,14 @@
+DirectProbe.lean:8:75: error: failed to synthesize
+  Decidable (∀ (l : PosFin 2), ¬(l, true) ∈ [lit1] ∨ ¬(l, false) ∈ [lit1])
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+DirectProbe.lean:9:86: error: failed to synthesize
+  Decidable (∀ (l : PosFin 2), ¬(l, true) ∈ [(lit1.fst, false)] ∨ ¬(l, false) ∈ [(lit1.fst, false)])
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+DirectProbe.lean:13:86: error: Tactic `decide` proved that the proposition
+  lratChecker directFormula [Action.addEmpty 3 #[1]] = Result.rupFailure
+is false
+'direct_check' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'direct_bad' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+DirectProbe.lean:16:7: error(lean.unknownIdentifier): Unknown identifier `lratChecker_sound`

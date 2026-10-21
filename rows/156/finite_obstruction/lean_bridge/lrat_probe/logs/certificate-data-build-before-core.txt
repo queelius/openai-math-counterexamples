@@ -1,0 +1,16 @@
+CertificateData.lean:2:0: error: unknown module prefix 'DirectLRAT'
+
+No directory 'DirectLRAT' or file 'DirectLRAT.olean' in the search path entries:
+/home/spinoza/prove2me_workspace/.local/campaigns/20261018T060620Z/resumption-20261020/restored-archive/environment/.lake/packages/Cli/.lake/build/lib/lean
+/home/spinoza/prove2me_workspace/.local/campaigns/20261018T060620Z/resumption-20261020/restored-archive/environment/.lake/packages/batteries/.lake/build/lib/lean
+/home/spinoza/prove2me_workspace/.local/campaigns/20261018T060620Z/resumption-20261020/restored-archive/environment/.lake/packages/Qq/.lake/build/lib/lean
+/home/spinoza/prove2me_workspace/.local/campaigns/20261018T060620Z/resumption-20261020/restored-archive/environment/.lake/packages/aesop/.lake/build/lib/lean
+/home/spinoza/prove2me_workspace/.local/campaigns/20261018T060620Z/resumption-20261020/restored-archive/environment/.lake/packages/proofwidgets/.lake/build/lib/lean
+/home/spinoza/prove2me_workspace/.local/campaigns/20261018T060620Z/resumption-20261020/restored-archive/environment/.lake/packages/importGraph/.lake/build/lib/lean
+/home/spinoza/prove2me_workspace/.local/campaigns/20261018T060620Z/resumption-20261020/restored-archive/environment/.lake/packages/LeanSearchClient/.lake/build/lib/lean
+/home/spinoza/prove2me_workspace/.local/campaigns/20261018T060620Z/resumption-20261020/restored-archive/environment/.lake/packages/plausible/.lake/build/lib/lean
+/home/spinoza/prove2me_workspace/.local/campaigns/20261018T060620Z/resumption-20261020/restored-archive/environment/.lake/packages/mathlib/.lake/build/lib/lean
+/home/spinoza/github/math-research/.worktrees/family156-lean-bridge-20261021/research/family156_lrat/lean/.lake/build/lib/lean
+/home/spinoza/.elan/toolchains/leanprover--lean4---v4.33.1/lib/lean
+.
+/home/spinoza/.elan/toolchains/leanprover--lean4---v4.33.1/lib/lean

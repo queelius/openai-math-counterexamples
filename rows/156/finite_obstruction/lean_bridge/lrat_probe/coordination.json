@@ -1,0 +1,8 @@
+{
+  "claim": "https://github.com/piiiico/openai-math-counterexamples/issues/9#issuecomment-6313255779",
+  "source_head": "f3e88206eb0c1ca065eb7106e06602d1aaa4c25b",
+  "bridge_head": "d3461179d6d7161ba3ae6241f09f1b160179b70a",
+  "only_open_pr": 12,
+  "feedback": "No comments, reviews or inline comments at refresh; no competing claim",
+  "posting": "GitHub integration write returned 403; authenticated gh fallback succeeded"
+}

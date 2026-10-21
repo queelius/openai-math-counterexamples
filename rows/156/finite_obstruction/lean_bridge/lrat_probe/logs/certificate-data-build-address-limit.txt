@@ -1,0 +1,1 @@
+CertificateData.lean:2:0: error: failed to read file '/home/spinoza/prove2me_workspace/.local/campaigns/20261018T060620Z/resumption-20261020/restored-archive/environment/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Trace.olean.private'

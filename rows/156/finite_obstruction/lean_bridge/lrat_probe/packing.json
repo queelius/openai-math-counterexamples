@@ -1,0 +1,9 @@
+{
+  "steps": 18302,
+  "all_roundtrips_equal": true,
+  "base": 65536,
+  "max_digits": 297,
+  "source_bytes": 6667416,
+  "source_sha256": "10d2f4e39e87cc031450f6edaf4df8a96a0220405d6ee179c9c06df1ccfdd68d",
+  "hints_sha256": "609faa5bb31b3b4ce54af2b372d17e7e520a8f4f0e42ff7a4d075ed474413e54"
+}

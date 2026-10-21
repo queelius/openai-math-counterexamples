@@ -1,0 +1,23 @@
+MapDiagnostic.lean:6:98: error: Tactic `decide` failed for proposition
+  ((Std.HashMap.emptyWithCapacity 1).insert 1 true).size = 1
+because its `Decidable` instance
+  instDecidableEqNat ((Std.HashMap.emptyWithCapacity 1).insert 1 true).size 1
+did not reduce to `isTrue` or `isFalse`.
+
+Reduction got stuck at the `Decidable` instance
+  match h : ((Std.HashMap.emptyWithCapacity 1).insert 1 true).size.beq 1 with
+  | true => isTrue ⋯
+  | false => isFalse ⋯
+MapDiagnostic.lean:8:111: error: Tactic `decide` failed for proposition
+  ((Std.HashMap.emptyWithCapacity 1).getThenInsertIfNew? 1 true).fst = none
+because its `Decidable` instance
+  ((Std.HashMap.emptyWithCapacity 1).getThenInsertIfNew? 1 true).fst.decidableEqNone
+did not reduce to `isTrue` or `isFalse`.
+
+Reduction got stuck at the `Decidable` instance
+  match ((Std.HashMap.emptyWithCapacity 1).getThenInsertIfNew? 1 true).fst with
+  | none => isTrue ⋯
+  | some val => isFalse ⋯
+MapDiagnostic.lean:10:0: error: maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information

@@ -1,0 +1,281 @@
+{
+  "started_at": "2026-10-21T09:56:05Z",
+  "deadline": "2026-10-21T10:56:05Z",
+  "verification_begins": "2026-10-21T10:36:05Z",
+  "attempts": [
+    {
+      "id": "certificate-data-build",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        "CertificateData.olean",
+        "CertificateData.lean"
+      ],
+      "environment": {
+        "LEAN_PATH": "."
+      },
+      "timeout_seconds": 180,
+      "memory_limit_bytes": 8589934592,
+      "elapsed_seconds": 1.276,
+      "exit": 1,
+      "status": "completed",
+      "peak_rss_kib": 819504,
+      "log": "logs/certificate-data-build-before-core.txt",
+      "classification": "setup error: data build launched before DirectLRAT compiled; no mathematical conclusion"
+    },
+    {
+      "id": "certificate-data-build-after-core",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-o",
+        "CertificateData.olean",
+        "CertificateData.lean"
+      ],
+      "environment": {
+        "LEAN_PATH": "."
+      },
+      "timeout_seconds": 180,
+      "memory_limit_bytes": 8589934592,
+      "elapsed_seconds": 2.849,
+      "exit": 1,
+      "status": "completed",
+      "peak_rss_kib": 1154856,
+      "log": "logs/certificate-data-build-address-limit.txt",
+      "classification": "Address-space cap prevented importing pinned Mathlib private olean; file exists. Use Lean allocator limit, not RLIMIT_AS."
+    },
+    {
+      "id": "certificate-data-build-allocator-limit",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-M",
+        "4096",
+        "-j",
+        "2",
+        "-o",
+        "CertificateData.olean",
+        "CertificateData.lean"
+      ],
+      "environment": {
+        "LEAN_PATH": "."
+      },
+      "timeout_seconds": 180,
+      "lean_memory_limit_megabytes": 4096,
+      "elapsed_seconds": 7.446,
+      "exit": 134,
+      "status": "completed",
+      "peak_rss_kib": 6065300,
+      "log": "logs/certificate-data-build-allocator-limit.txt",
+      "classification": "4GB allocation-limit failure; baseline import also fails, so this does not isolate certificate representation cost"
+    },
+    {
+      "id": "certificate-packed-build",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-M",
+        "4096",
+        "-j",
+        "2",
+        "-o",
+        "CertificateData.olean",
+        "CertificateData.lean"
+      ],
+      "environment": {
+        "LEAN_PATH": "."
+      },
+      "timeout_seconds": 180,
+      "lean_memory_limit_megabytes": 4096,
+      "elapsed_seconds": 8.588,
+      "exit": 134,
+      "status": "completed",
+      "peak_rss_kib": 6063896,
+      "log": "logs/certificate-packed-build.txt",
+      "classification": "4GB allocation-limit failure; baseline import also fails, so this does not isolate certificate representation cost"
+    },
+    {
+      "id": "memory-baseline",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-M",
+        "4096",
+        "-j",
+        "2",
+        "MemoryBaseline.lean"
+      ],
+      "exit": 134,
+      "elapsed_seconds": 6.203,
+      "peak_rss_kib": 6054868,
+      "log": "logs/memory-baseline.txt"
+    },
+    {
+      "id": "certificate-packed-build-8gb",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-M",
+        "8192",
+        "-j",
+        "2",
+        "-o",
+        "CertificateData.olean",
+        "CertificateData.lean"
+      ],
+      "environment": {
+        "LEAN_PATH": "."
+      },
+      "timeout_seconds": 180,
+      "lean_memory_limit_megabytes": 8192,
+      "elapsed_seconds": 39.806,
+      "exit": 0,
+      "status": "completed",
+      "peak_rss_kib": 7684460,
+      "log": "logs/certificate-packed-build-8gb.txt",
+      "reason": "4GB cap also rejects one-numeral import baseline; cannot attribute earlier failures to data"
+    },
+    {
+      "id": "full-native-probe",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-M",
+        "8192",
+        "-j",
+        "2",
+        "--run",
+        "NativeProbe.lean"
+      ],
+      "environment": {
+        "LEAN_PATH": "."
+      },
+      "timeout_seconds": 120,
+      "lean_memory_limit_megabytes": 8192,
+      "elapsed_seconds": 25.372,
+      "exit": 0,
+      "status": "completed",
+      "peak_rss_kib": 6745900,
+      "log": "logs/full-native-probe.txt",
+      "classification": "Native finite computation only, not a theorem"
+    },
+    {
+      "id": "full-kernel-attempt",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-M",
+        "8192",
+        "-j",
+        "2",
+        "KernelFull.lean"
+      ],
+      "environment": {
+        "LEAN_PATH": "."
+      },
+      "timeout_seconds": 180,
+      "lean_memory_limit_megabytes": 8192,
+      "elapsed_seconds": 13.09,
+      "exit": 1,
+      "status": "completed",
+      "peak_rss_kib": 7010448,
+      "log": "logs/full-kernel-attempt.txt",
+      "classification": "Failed tactic reduction after13.09s, not timeout; declarations with sorryAx in failed output are NOT accepted as proofs"
+    },
+    {
+      "id": "kernel-components-full",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-M",
+        "8192",
+        "-j",
+        "2",
+        "KernelComponents.lean"
+      ],
+      "timeout_seconds": 90,
+      "elapsed_seconds": 76.448,
+      "exit": 1,
+      "status": "completed",
+      "peak_rss_kib": 8442496,
+      "log": "logs/kernel-components-full.txt"
+    },
+    {
+      "id": "full-cbv-attempt",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-M",
+        "8192",
+        "-j",
+        "2",
+        "KernelCbv.lean"
+      ],
+      "environment": {
+        "LEAN_PATH": "."
+      },
+      "timeout_seconds": 180,
+      "lean_memory_limit_megabytes": 8192,
+      "elapsed_seconds": 9.282,
+      "exit": 1,
+      "status": "completed",
+      "peak_rss_kib": 6721272,
+      "log": "logs/full-cbv-attempt.txt",
+      "method": "Proof-producing decide_cbv; distinct from native_decide, but only successful build plus axiom audit counts"
+    },
+    {
+      "id": "full-cbv-large-attempt",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-M",
+        "8192",
+        "-j",
+        "2",
+        "KernelCbvLarge.lean"
+      ],
+      "environment": {
+        "LEAN_PATH": "."
+      },
+      "timeout_seconds": 180,
+      "lean_memory_limit_megabytes": 8192,
+      "cbv_max_steps": 100000000,
+      "elapsed_seconds": 180.177,
+      "exit": null,
+      "status": "timeout",
+      "peak_rss_kib": null,
+      "log": "logs/full-cbv-large-attempt.txt",
+      "reason": "Default cbv100000-step limit exhausted; one explicit larger bound with same timeout, not another proof mechanism",
+      "peak_rss_scope": "Reaped-child statistic under timeout; not a reliable full compiler peak"
+    }
+  ],
+  "milestones": [
+    {
+      "at": "2026-10-21T10:05:45Z",
+      "finding": "Direct typed-clause checker success and rejecting control kernel checked with standard axioms"
+    },
+    {
+      "at": "2026-10-21T10:08:35Z",
+      "finding": "All18302steps traced;1317865hints independently replayed"
+    },
+    {
+      "at": "2026-10-21T10:14:11Z",
+      "finding": "source_satisfies_formula and generic LRAT-success implication compile with standard axioms; full equality still open"
+    }
+  ],
+  "outcome": "inconclusive_for_unconditional_kernel_theorem",
+  "remaining_obligation": "Construct a kernel-checked proof of lratChecker sourceFormula fullProof = Result.success without sorryAx or native-evaluation axioms",
+  "kernel_normalization_root_cause": "Unknown; record failed component reductions, not a proof of impossibility"
+}

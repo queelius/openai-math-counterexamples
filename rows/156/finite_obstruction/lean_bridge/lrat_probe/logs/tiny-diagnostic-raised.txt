@@ -1,0 +1,8 @@
+true
+{ clauses := { toList := [[(⟨0, ⋯⟩, true)], [(⟨0, ⋯⟩, false)]] } }
+Diagnostic.lean:11:0: error: maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+Diagnostic.lean:12:0: error: maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information

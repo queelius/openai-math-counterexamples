@@ -1,0 +1,7 @@
+{
+  "command": "bash research/family156_lrat/reproduce.sh",
+  "exit": 0,
+  "elapsed_seconds": 114.984,
+  "log": "logs/final-reproduction.txt",
+  "scope": "Accepted interface and controls, full native replay; intentionally excludes failed Kernel*.lean experiments"
+}
